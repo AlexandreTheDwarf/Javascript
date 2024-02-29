@@ -1,0 +1,49 @@
+body {
+  h2{
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 0%;
+  }
+  .filter {
+    color: grey;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    // Add styles for hidden radio input
+    label {
+        position: relative;
+        cursor: pointer;
+
+        input[type="radio"].genre-filter {
+            position: absolute;
+            left: -9999px;
+        }
+
+        input[type="radio"].role-filter {
+            position: absolute;
+            left: -9999px;
+        }
+
+        /* Styles for the checked genre radio buttons */
+        input[type="radio"].genre-filter:checked + svg {
+            fill: white; /* Change the SVG fill color to white */
+        }
+
+        /* Styles for the checked role radio buttons */
+        input[type="radio"].role-filter:checked + svg {
+            fill: white; /* Change the SVG fill color to white */
+        }
+
+        svg{
+            fill: grey;
+            width: 40px;
+        }
+    }
+  }
+}

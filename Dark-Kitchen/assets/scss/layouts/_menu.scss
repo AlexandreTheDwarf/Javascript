@@ -1,0 +1,61 @@
+.TitreMenu {
+  text-align: center;
+  font-family: $font-title;
+  font-size: 2rem;
+  padding-top: 2%;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  .category-button {
+    position: relative;
+    cursor: pointer;
+    background: $cream;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    &:hover {
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation: translateEffect 500ms ease-in-out;
+          @keyframes translateEffect {
+            0% {
+              transform: translateY(0px) rotate(0deg);
+            }
+            30% {
+              transform: translateY(-3px) rotate(5deg);
+            }
+            70% {
+              transform: translateY(-3px) rotate(-5deg);
+            }
+            100% {
+              transform: translateY(0px) rotate(0deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $break-desktop) {
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 2%;
+    .category-button {
+      position: relative;
+      background: $cream;
+      border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+      color: black;
+      box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+    }
+  }
+}

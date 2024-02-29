@@ -1,0 +1,80 @@
+// About
+// About
+.about {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 48px;
+  .about_title {
+    padding: 36px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  h2 {
+    font-family: $font-title;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  .about_slogan {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: $font-text;
+    font-weight: 800;
+    margin: 0 12px;
+  }
+  .about_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+
+    .about_text {
+      font-family: $font-text;
+      @include flexCenter;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-left: 24px;
+      margin-top: 48px;
+      margin-right: 24px;
+      width: 50%;
+      h3 {
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: left;
+        font-weight: 800;
+        padding-bottom: 24px;
+      }
+    }
+    figure {
+      width: 50%;
+      margin: 0 24px;
+      aspect-ratio: 8/7;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        box-shadow: $eliShadow;
+      }
+    }
+  }
+}
+@media (max-width: 968px) {
+  .about .about_container {
+    flex-direction: column;
+    padding-bottom: 48px;
+    figure {
+      width: 90%;
+    }
+    .about_text {
+      margin-top: 36px;
+      width: 90%;
+    }
+  }
+}
